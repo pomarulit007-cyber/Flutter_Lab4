@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'models/anime.dart';
+import 'package:anime_catalog/models/anime.dart';
 
-class AnimeCard extends StatelessWidget {
-  const AnimeCard({super.key, required this.anime});
-  final Anime anime;
+class GameCard extends StatelessWidget {
+  const GameCard({super.key, required this.game});
+  final Game game;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class AnimeCard extends StatelessWidget {
   void _showDetails(BuildContext context) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text(anime.description),
+        content: Text(game.description),
         duration: const Duration(seconds: 3),
       ),
     );
@@ -33,7 +33,7 @@ class AnimeCard extends StatelessWidget {
 
   Widget _buildPoster() {
     return Image.asset(
-      anime.imagePath,
+      game.imagePath,
       height: 550,
       width: double.infinity,
       fit: BoxFit.cover,
@@ -49,6 +49,8 @@ class AnimeCard extends StatelessWidget {
           _buildTitleRow(),
           const SizedBox(height: 4),
           _buildGenre(),
+          const SizedBox(height: 4),
+          _buildDeveloper(),
           const SizedBox(height: 8),
           _buildRating(),
           const SizedBox(height: 8),
@@ -64,7 +66,7 @@ class AnimeCard extends StatelessWidget {
       children: [
         Expanded(
           child: Text(
-            anime.title,
+            game.title,
             style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
@@ -72,7 +74,7 @@ class AnimeCard extends StatelessWidget {
           ),
         ),
         Text(
-          '${anime.year}',  // ← была пропущена запятая
+          '${game.year}',
           style: const TextStyle(
             color: Colors.grey,
             fontSize: 14,
@@ -84,11 +86,31 @@ class AnimeCard extends StatelessWidget {
 
   Widget _buildGenre() {
     return Text(
-      anime.genre,
+      game.genre,
       style: const TextStyle(
         color: Colors.deepPurple,
         fontSize: 13,
       ),
+    );
+  }
+
+  Widget _buildDeveloper() {
+    return Row(
+      children: [
+        const Icon(
+          Icons.business,
+          size: 14,
+          color: Colors.orange,
+        ),
+        const SizedBox(width: 4),
+        Text(
+          game.developer,
+          style: const TextStyle(
+            color: Colors.orange,
+            fontSize: 12,
+          ),
+        ),
+      ],
     );
   }
 
@@ -102,10 +124,17 @@ class AnimeCard extends StatelessWidget {
         ),
         const SizedBox(width: 4),
         Text(
-          anime.rating.toStringAsFixed(1),
+          game.rating.toStringAsFixed(1),
           style: const TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 14,
+          ),
+        ),
+        const Text(
+          ' / 10',
+          style: TextStyle(
+            fontSize: 12,
+            color: Colors.grey,
           ),
         ),
       ],
@@ -114,7 +143,7 @@ class AnimeCard extends StatelessWidget {
 
   Widget _buildDescription() {
     return Text(
-      anime.description,
+      game.description,
       style: const TextStyle(
         fontSize: 13,
         color: Colors.black87,

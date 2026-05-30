@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'anime_list.dart';
+import 'package:anime_catalog/anime_list.dart';
+import 'package:anime_catalog/models/anime_data.dart';
 
 void main() {
   runApp(
@@ -13,13 +14,33 @@ void main() {
       home: Scaffold(
         appBar: AppBar(
           title: const Text(
-            'Аниме-каталог 🎌',
+            'Каталог игр 🎮',
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           backgroundColor: Colors.deepPurple,
           foregroundColor: Colors.white,
+          actions: [
+            Padding(
+              padding: const EdgeInsets.only(right: 16),
+              child: Center(
+                child: Row(
+                  children: [
+                    const Icon(Icons.sports_esports, size: 20),
+                    const SizedBox(width: 4),
+                    Text(
+                      '${gamesList.length}',
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
-        body: AnimeList(),
+        body: const GameList(),
       ),
     ),
   );

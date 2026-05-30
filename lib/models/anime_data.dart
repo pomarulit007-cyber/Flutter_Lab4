@@ -1,94 +1,94 @@
 import 'anime.dart';
 
-const animeList = [
-  Anime(
-    title: 'Death Note',
-    description:
-        'Гениальный студент находит таинственную тетрадь смерти и решает создать идеальный мир.',
-    genre: 'Триллер, Психология',
-    year: 2006,
-    rating: 9.0,
-    imagePath: 'assets/images/anime1.jpg',
+const gamesList = [
+  Game(
+    title: 'The Witcher 3: Wild Hunt',
+    description: 'Ведьмак Геральт ищет свою приёмную дочь в огромном открытом мире, полном чудовищ и магии.',
+    genre: 'RPG, Открытый мир',
+    year: 2015,
+    rating: 9.5,
+    developer: 'CD Projekt Red',
+    imagePath: 'assets/images/game1.jpg',
   ),
-  Anime(
-    title: 'Attack on Titan',
-    description:
-        'Человечество борется за выживание против гигантских титанов, пожирающих людей.',
-    genre: 'Экшен, Драма',
-    year: 2013,
-    rating: 9.1,
-    imagePath: 'assets/images/anime2.jpg',
+  Game(
+    title: 'Cyberpunk 2077',
+    description: 'Погрузитесь в мрачное будущее Найт-Сити, где кибернетические импланты меняют правила игры.',
+    genre: 'RPG, Экшен',
+    year: 2020,
+    rating: 8.5,
+    developer: 'CD Projekt Red',
+    imagePath: 'assets/images/game2.jpg',
   ),
-  Anime(
-    title: 'Naruto',
-    description:
-        'История молодого ниндзя Наруто, мечтающего стать Хокаге своей деревни.',
+  Game(
+    title: 'Red Dead Redemption 2',
+    description: 'Эпическая история бандита Артура Моргана в эпоху заката Дикого Запада.',
     genre: 'Экшен, Приключения',
-    year: 2002,
-    rating: 8.3,
-    imagePath: 'assets/images/anime3.jpg',
+    year: 2018,
+    rating: 9.8,
+    developer: 'Rockstar Games',
+    imagePath: 'assets/images/game3.jpg',
   ),
-  Anime(
-    title: 'One Piece',
-    description:
-        'Приключения Луффи и его пиратской команды в поисках легендарного сокровища.',
-    genre: 'Приключения, Комедия',
-    year: 1999,
-    rating: 8.9,
-    imagePath: 'assets/images/anime4.jpg',
+  Game(
+    title: 'God of War Ragnarök',
+    description: 'Кратос и Атрей отправляются в путешествие по девяти мирам, чтобы предотвратить Рагнарёк.',
+    genre: 'Экшен, Приключения',
+    year: 2022,
+    rating: 9.6,
+    developer: 'Santa Monica Studio',
+    imagePath: 'assets/images/game4.jpg',
   ),
-  Anime(
-    title: 'Demon Slayer',
-    description:
-        'Танджиро сражается с демонами, чтобы спасти свою сестру и отомстить за семью.',
-    genre: 'Экшен, Фэнтези',
+  Game(
+    title: 'Elden Ring',
+    description: 'Исследуйте огромный мир, сражайтесь с могущественными боссами и раскройте тайны Кольца.',
+    genre: 'RPG, Souls-like',
+    year: 2022,
+    rating: 9.7,
+    developer: 'FromSoftware',
+    imagePath: 'assets/images/game5.jpg',
+  ),
+    Game(
+    title: 'The Legend of Zelda: Tears of the Kingdom',
+    description: 'Линк исследует небесные острова и подземелья Хайрула, используя новые способности.',
+    genre: 'Приключения, Открытый мир',
+    year: 2023,
+    rating: 9.7,
+    developer: 'Nintendo',
+    imagePath: 'assets/images/game6.jpg',
+  ),
+  Game(
+    title: 'Baldur\'s Gate 3',
+    description: 'Эпическая CRPG по мотивам D&D, где ваш выбор формирует историю.',
+    genre: 'RPG, Пошаговая',
+    year: 2023,
+    rating: 9.8,
+    developer: 'Larian Studios',
+    imagePath: 'assets/images/game7.jpg',
+  ),
+  Game(
+    title: 'Hollow Knight',
+    description: 'Путешествуйте по подземному королевству жуков, сражайтесь с врагами и раскрывайте тайны.',
+    genre: 'Метроидвания, Платформер',
+    year: 2017,
+    rating: 9.4,
+    developer: 'Team Cherry',
+    imagePath: 'assets/images/game8.jpg',
+  ),
+  Game(
+    title: 'Disco Elysium',
+    description: 'Детективная RPG с уникальной системой навыков, где вместо боёв — диалоги.',
+    genre: 'RPG, Детектив',
     year: 2019,
-    rating: 8.7,
-    imagePath: 'assets/images/anime5.jpg',
+    rating: 9.6,
+    developer: 'ZA/UM',
+    imagePath: 'assets/images/game9.jpg',
   ),
-  Anime(
-    title: 'My Hero Academia',
-    description:
-        'В мире супергероев подросток без способностей мечтает стать величайшим героем.',
-    genre: 'Экшен, Супергерои',
+  Game(
+    title: 'Stardew Valley',
+    description: 'Унаследуйте старую ферму, выращивайте урожай, общайтесь с жителями и исследуйте пещеры.',
+    genre: 'Симулятор, Ферма',
     year: 2016,
-    rating: 8.4,
-    imagePath: 'assets/images/anime6.jpg',
-  ),
-  Anime(
-    title: 'Sword Art Online',
-    description:
-        'Игроки оказываются в ловушке виртуальной реальности, где смерть в игре означает смерть в реальности.',
-    genre: 'Фэнтези, Приключения',
-    year: 2012,
-    rating: 7.7,
-    imagePath: 'assets/images/anime7.jpg',
-  ),
-  Anime(
-    title: 'Fullmetal Alchemist: Brotherhood',
-    description:
-        'Два брата-алхимика ищут философский камень, чтобы вернуть утраченные тела.',
-    genre: 'Экшен, Фэнтези',
-    year: 2009,
-    rating: 9.1,
-    imagePath: 'assets/images/anime8.jpg',
-  ),
-  Anime(
-    title: 'Tokyo Ghoul',
-    description:
-        'Студент Канеки превращается в полу-гуля после трагического инцидента.',
-    genre: 'Ужасы, Экшен',
-    year: 2014,
-    rating: 7.9,
-    imagePath: 'assets/images/anime9.jpg',
-  ),
-  Anime(
-    title: 'Steins;Gate',
-    description:
-        'Учёный случайно изобретает машину времени и сталкивается с последствиями.',
-    genre: 'Sci-Fi, Триллер',
-    year: 2011,
-    rating: 9.1,
-    imagePath: 'assets/images/anime10.jpg',
+    rating: 9.2,
+    developer: 'ConcernedApe',
+    imagePath: 'assets/images/game10.jpg',
   ),
 ];
